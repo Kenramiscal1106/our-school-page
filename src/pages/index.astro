@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
+import Default from "../layouts/Default.astro";
 ---
 
 <html lang="en">
@@ -10,6 +11,9 @@ import Navbar from "../components/Navbar.astro";
 	</head>
 	<body>
 		<Navbar/>
+		<Default>
+			<h1>Hello, world</h1>
+		</Default>
 		<Footer/>
 	</body>
 </html>
