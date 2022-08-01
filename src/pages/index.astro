@@ -1,19 +1,71 @@
 ---
+import NavItem from "../components/NavItem.astro";
+import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import Default from "../layouts/Default.astro";
+import "../styles/globals.css"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-	</head>
-	<body>
-		<Navbar/>
-		<Default>
-			<h1>Hello, world</h1>
-		</Default>
-		<Footer/>
-	</body>
+<html lang="en" class="min-h-full">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Lcctanauan - The Premiere Catholic Educational Institution in Tanauan, Batangas</title>
+</head>
+
+<body>
+	<Navbar>
+		<!-- <NavItem text="Admission" /> -->
+	</Navbar>
+	<Default>
+		<div class="h-screen mx-auto flex items-center justify-center p-5">
+			<div class="basis-[1196px] flex justify-center items-center gap-28">
+				<h1 class="text-6xl font-medium">
+					The <span class="text-gold-accent font-bold">Premiere Catholic Educational Institution</span> in Tanauan,
+					Batangas
+				</h1>
+			</div>
+		</div>
+		<div class="h-screen mx-auto flex items-center justify-center p-5">
+			<div class="basis-5/6">
+
+				<h2 class="font-semibold">A proud member of <span class="text-gold-accent font-bold">Unified La Consolacion
+						College South Luzon</span>
+				</h2>
+			</div>
+		</div>
+		<h2 class="text-center">About us</h2>
+		<div class="flex items-stretch px-6 gap-5 justify-center sm:flex-col xl:flex-row my-9">
+			<Card type={"vision"}>
+				ULCC-SL Vision as a Catholic Augustinian Marian Educational System, commits itself to holistic formation of the
+				21st century learners.
+			</Card>
+			<Card type={"mission"}>
+				As we nurture a system of ASOLC unified learning communities in Laguna and Batangas, we assume the
+				responsibilities of:
+				<ol>
+					<li>Providing innovative and transformative education for lifelong learning</li>
+					<li>Creating sustainable community involvement and extension programs, and</li>
+					<li>
+						Utilizing functional research projects for the development of ULCC-SL campuses, industry, educational
+						pedagogies, and communities.</li>
+				</ol>
+			</Card>
+			<Card type={"Core values"}>
+				<div class="text-xl">
+					<span class="text-gold-accent">U</span> - Unity in Truth <br />
+					<span class="text-gold-accent">L</span> - Loyalty<br />
+					<span class="text-gold-accent">C</span> - Compassion<br />
+					<span class="text-gold-accent">C</span> - Committed to Competence<br />
+					<span class="text-gold-accent">S</span> - Service to God and Country<br />
+					<span class="text-gold-accent">L</span> - Love of Creation<br />
+				</div>
+			</Card>
+		</div>
+	</Default>
+	<Footer />
+</body>
+
 </html>
