@@ -1,0 +1,10 @@
+---
+const { dropdown, text } = Astro.props
+---
+
+<div class="p-4 relative w-max">
+  <button>{text}</button>
+  {dropdown ? <div class="absolute bottom-0 left-0s">
+    <slot></slot>
+  </div> : ""}
+</div>
