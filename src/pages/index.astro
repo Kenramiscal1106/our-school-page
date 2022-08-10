@@ -1,13 +1,12 @@
 ---
-import NavItem from "../components/NavItem.astro";
 import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
-import Navbar from "../components/Navbar.astro";
+import Navbar from "../components/Navbar.svelte";
 import Default from "../layouts/Default.astro";
 import "../styles/globals.css"
 ---
 
-<html lang="en" class="min-h-full">
+<html lang="en" class="">
 
 <head>
 	<meta charset="utf-8" />
@@ -16,28 +15,26 @@ import "../styles/globals.css"
 </head>
 
 <body>
-	<Navbar>
-		<!-- <NavItem text="Admission" /> -->
-	</Navbar>
+	<Navbar client:load />
 	<Default>
-		<div class="h-screen mx-auto flex items-center justify-center p-5">
-			<div class="basis-[1196px] flex justify-center items-center gap-28">
-				<h1 class="text-6xl font-medium">
-					The <span class="text-gold-accent font-bold">Premiere Catholic Educational Institution</span> in Tanauan,
+		<!-- <div class="">
+			<div class="">
+				<h1 class="">
+					The <span class="">Premiere Catholic Educational Institution</span> in Tanauan,
 					Batangas
 				</h1>
 			</div>
 		</div>
-		<div class="h-screen mx-auto flex items-center justify-center p-5">
-			<div class="basis-5/6">
+		<div class="">
+			<div class="">
 
-				<h2 class="font-semibold">A proud member of <span class="text-gold-accent font-bold">Unified La Consolacion
-						College South Luzon</span>
+				<h2 class="">Unified La Consolacion
+					College South Luzon
 				</h2>
 			</div>
 		</div>
-		<h2 class="text-center">About us</h2>
-		<div class="flex items-stretch px-6 gap-5 justify-center sm:flex-col xl:flex-row my-9">
+		<h2 class="">About us</h2>
+		<div class="">
 			<Card type={"vision"}>
 				ULCC-SL Vision as a Catholic Augustinian Marian Educational System, commits itself to holistic formation of the
 				21st century learners.
@@ -54,16 +51,16 @@ import "../styles/globals.css"
 				</ol>
 			</Card>
 			<Card type={"Core values"}>
-				<div class="text-xl">
-					<span class="text-gold-accent">U</span> - Unity in Truth <br />
-					<span class="text-gold-accent">L</span> - Loyalty<br />
-					<span class="text-gold-accent">C</span> - Compassion<br />
-					<span class="text-gold-accent">C</span> - Committed to Competence<br />
-					<span class="text-gold-accent">S</span> - Service to God and Country<br />
-					<span class="text-gold-accent">L</span> - Love of Creation<br />
+				<div class="">
+					<span class="">U</span> - Unity in Truth <br />
+					<span class="">L</span> - Loyalty<br />
+					<span class="">C</span> - Compassion<br />
+					<span class="">C</span> - Committed to Competence<br />
+					<span class="">S</span> - Service to God and Country<br />
+					<span class="">L</span> - Love of Creation<br />
 				</div>
 			</Card>
-		</div>
+		</div> -->
 	</Default>
 	<Footer />
 </body>
