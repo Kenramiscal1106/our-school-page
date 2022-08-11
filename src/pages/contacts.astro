@@ -1,0 +1,68 @@
+---
+import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.svelte";
+import Default from "../layouts/Default.astro";
+import "../styles/globals.css"
+---
+
+<html lang="en" class="">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Lcctanauan - The Premiere Catholic Educational Institution in Tanauan, Batangas</title>
+</head>
+
+<body>
+  <Navbar client:load />
+  <Default>
+    <!-- <div class="">
+			<div class="">
+				<h1 class="">
+					The <span class="">Premiere Catholic Educational Institution</span> in Tanauan,
+					Batangas
+				</h1>
+			</div>
+		</div>
+		<div class="">
+			<div class="">
+
+				<h2 class="">Unified La Consolacion
+					College South Luzon
+				</h2>
+			</div>
+		</div>
+		<h2 class="">About us</h2>
+		<div class="">
+			<Card type={"vision"}>
+				ULCC-SL Vision as a Catholic Augustinian Marian Educational System, commits itself to holistic formation of the
+				21st century learners.
+			</Card>
+			<Card type={"mission"}>
+				As we nurture a system of ASOLC unified learning communities in Laguna and Batangas, we assume the
+				responsibilities of:
+				<ol>
+					<li>Providing innovative and transformative education for lifelong learning</li>
+					<li>Creating sustainable community involvement and extension programs, and</li>
+					<li>
+						Utilizing functional research projects for the development of ULCC-SL campuses, industry, educational
+						pedagogies, and communities.</li>
+				</ol>
+			</Card>
+			<Card type={"Core values"}>
+				<div class="">
+					<span class="">U</span> - Unity in Truth <br />
+					<span class="">L</span> - Loyalty<br />
+					<span class="">C</span> - Compassion<br />
+					<span class="">C</span> - Committed to Competence<br />
+					<span class="">S</span> - Service to God and Country<br />
+					<span class="">L</span> - Love of Creation<br />
+				</div>
+			</Card>
+		</div> -->
+  </Default>
+  <Footer />
+</body>
+
+</html>
