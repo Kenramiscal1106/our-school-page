@@ -7,7 +7,7 @@ module.exports = {
         default: "Poppins, sans-serif",
       },
       colors: {
-        "gold-accent": "#D29000",
+        "blue-accent": "#003A6A",
         secondary: "#242424",
       },
       boxShadow: {
