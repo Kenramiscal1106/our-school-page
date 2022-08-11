@@ -1,0 +1,12 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.svelte";
+import Default from "../layouts/Default.astro";
+import "../styles/globals.css";
+---
+
+<Navbar client:load />
+<Default>
+  <h1>Page not found</h1>
+</Default>
+<Footer />
