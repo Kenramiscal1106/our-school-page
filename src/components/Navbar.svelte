@@ -22,24 +22,39 @@
     isScrolled
       ? "fixed bg-secondary text-white slide-in-down"
       : "bg-transparent absolute"
-  }  top-0 left-0 w-full flex`}
+  }  top-0 left-0 w-full`}
 >
-  <div class="flex-1 flex items-center justify-center">
-    <a href="/" class="text-2xl  flex items-center">
-      <img src={logo} alt="logo" class="h-8" />
-      <span class="text-3xl font-bold">LCCT</span>
-    </a>
+  <div class="flex max-w-7xl m-auto">
+    <div class="p-3 flex items-center  justify-center">
+      <a href="/" class="text-2xl gap-1 flex items-center">
+        <img src={logo} alt="logo" class="h-8" />
+        <span class="text-3xl font-bold">LCCT</span>
+      </a>
+    </div>
+    <div class="flex-1 flex justify-center">
+      <NavItem
+        dropdown={false}
+        text="Academic programs"
+        href="/academic-programs"
+        {isScrolled}
+      />
+      <NavItem
+        dropdown={false}
+        text="Events & activities"
+        href="/events-activities"
+        {isScrolled}
+      />
+      <NavItem dropdown={false} text="Contacts" href="/contacts" {isScrolled} />
+    </div>
+    <div class=" flex justify-center">
+      <NavItem
+        dropdown={false}
+        text="Preregis"
+        href="https://preregis.lcctanauan.edu.ph"
+        {isScrolled}
+      />
+    </div>
   </div>
-  <div class="flex-1 flex">
-    <NavItem text="Academic programs" href="/academic-programs" {isScrolled} />
-    <NavItem
-      text="Events & activities"
-      href="/events-activities"
-      {isScrolled}
-    />
-    <NavItem text="Contacts" href="/contacts" {isScrolled} />
-  </div>
-  <div class="flex-1" />
 </nav>
 
 <style>
