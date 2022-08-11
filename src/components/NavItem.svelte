@@ -11,5 +11,11 @@
     <slot />
   </div>
 {:else}
-  <a {href} class={`p-4 ${isScrolled ? "text-white" : ""}`}>{text}</a>
+  <a
+    {href}
+    target={href.includes("http") ? "_blank" : ""}
+    class={`p-4 ${
+      isScrolled ? "text-white" : ""
+    } hover:font-medium active:font-bold`}>{text}</a
+  >
 {/if}
