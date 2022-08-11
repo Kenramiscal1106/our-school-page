@@ -30,7 +30,7 @@
 }
 @layer base {
   ol {
-    @apply list-decimal list-inside marker:font-bold marker:text-gold-accent;
+    @apply list-decimal list-inside marker:font-bold marker:text-blue-accent;
   }
   * {
     @apply font-default font-normal;
