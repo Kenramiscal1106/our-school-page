@@ -2,20 +2,17 @@
   export let text;
   export let dropdown;
   export let href;
-  export let isScrolled;
 </script>
 
 {#if dropdown}
-  <button class="p-4">{text}</button>
-  <div class="p-4">
+  <button class="p-3">{text}</button>
+  <div class="p-3">
     <slot />
   </div>
 {:else}
   <a
     {href}
     target={href.includes("http") ? "_blank" : ""}
-    class={`p-4 ${
-      isScrolled ? "text-white" : ""
-    } hover:font-medium active:font-bold`}>{text}</a
+    class={`p-3 hover:font-medium`}>{text}</a
   >
 {/if}
