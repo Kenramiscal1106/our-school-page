@@ -3,21 +3,13 @@ import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.svelte";
 import Default from "../layouts/Default.astro";
-import "../styles/globals.css"
+import "../styles/globals.css";
 ---
 
-<html lang="en" class="">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Lcctanauan - The Premiere Catholic Educational Institution in Tanauan, Batangas</title>
-</head>
-
-<body>
-  <Navbar client:load />
-  <Default>
-    <!-- <div class="">
+<Default
+  title="Lcctanauan - The Premeier Catholic Educational Institution in Tanauan, Batangas"
+>
+  <!-- <div class="">
 			<div class="">
 				<h1 class="">
 					The <span class="">Premiere Catholic Educational Institution</span> in Tanauan,
@@ -61,8 +53,4 @@ import "../styles/globals.css"
 				</div>
 			</Card>
 		</div> -->
-  </Default>
-  <Footer />
-</body>
-
-</html>
+</Default>
