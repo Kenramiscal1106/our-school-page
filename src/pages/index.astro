@@ -2,10 +2,11 @@
 import "../styles/globals.css";
 import logo from "../assets/logo.svg";
 import HomeNavbar from "../components/HomeNavbar.svelte";
+// import { Image } from "@astrojs/image/components";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="p-0">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,51 +17,81 @@ import HomeNavbar from "../components/HomeNavbar.svelte";
     </title>
     <link rel="shortcut icon" href={logo} type="image/x-icon" />
   </head>
-  <body>
+  <body class="p-0">
     <HomeNavbar client:load />
+    <main>
+      <div>
+        <div
+          style="background-image:url('/static-assets/front page.png');"
+          class="min-h-screen bg-fixed grid grid-cols-[repeat(16,1fr)] bg-center"
+        >
+          <div
+            class="col-span-7 bg-white bg-opacity-80 backdrop-blur-sm flex flex-col justify-center items-start p-24"
+          >
+            <h1 class="text-5xl leading-snug">
+              The <span class="text-blue-accent font-bold"
+                >Premiere Catholic Educational Institution</span
+              > in Tanauan, Batangas
+            </h1>
+            <div>
+              <button>Sign up for Admission</button>
+              <button>Enroll now</button>
+            </div>
+            <p>First time around? Continue Scrolling</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          style="background-image:url('/static-assets/second.png');"
+          class="min-h-screen grid grid-cols-[repeat(16,1fr)] bg-center"
+        >
+          <div
+            class="col-span-7 bg-white bg-opacity-80 backdrop-blur-sm flex flex-col justify-center items-center p-24 space-y-4"
+          >
+            <h1>Vision</h1>
+            <div class="text-3xl leading-snug">
+              ULCC-SL, as a Catholic Augustinian Marian Educational System,
+              commits itself to holistic formation of the 21st century learners.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          style="background-image:url('/static-assets/third.png');"
+          class="bg-fixed min-h-screen grid grid-cols-[repeat(16,1fr)] bg-center"
+        >
+          <div
+            class="col-span-7 col-start-10 bg-white bg-opacity-80 backdrop-blur-sm flex flex-col justify-center items-center p-24 space-y-4"
+          >
+            <h1>Mission</h1>
+            <div class="text-2xl leading-normal">
+              As we nurture a system of ASOLC unified learning communities in
+              Laguna and Batangas, we assume the responsibilities of:
+              <ol>
+                <li>
+                  Providing innovative and transformative education for lifelong
+                  learning
+                </li>
+                <li>
+                  Creating sustainable community involvement and extension
+                  programs, and
+                </li>
+                <li>
+                  Utilizing functional research projects for the development of
+                  ULCC-SL campuses, industry, educational pedagogies, and
+                  communities.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+    </main>
   </body>
 </html>
-<!-- <div class="">
-			<div class="">
-				<h1 class="">
-					The <span class="">Premiere Catholic Educational Institution</span> in Tanauan,
-					Batangas
-				</h1>
-			</div>
-		</div>
-		<div class="">
-			<div class="">
-
-				<h2 class="">Unified La Consolacion
-					College South Luzon
-				</h2>
-			</div>
-		</div>
-		<h2 class="">About us</h2>
-		<div class="">
-			<Card type={"vision"}>
-				ULCC-SL Vision as a Catholic Augustinian Marian Educational System, commits itself to holistic formation of the
-				21st century learners.
-			</Card>
-			<Card type={"mission"}>
-				As we nurture a system of ASOLC unified learning communities in Laguna and Batangas, we assume the
-				responsibilities of:
-				<ol>
-					<li>Providing innovative and transformative education for lifelong learning</li>
-					<li>Creating sustainable community involvement and extension programs, and</li>
-					<li>
-						Utilizing functional research projects for the development of ULCC-SL campuses, industry, educational
-						pedagogies, and communities.</li>
-				</ol>
-			</Card>
-			<Card type={"Core values"}>
-				<div class="">
-					<span class="">U</span> - Unity in Truth <br />
-					<span class="">L</span> - Loyalty<br />
-					<span class="">C</span> - Compassion<br />
-					<span class="">C</span> - Committed to Competence<br />
-					<span class="">S</span> - Service to God and Country<br />
-					<span class="">L</span> - Love of Creation<br />
-				</div>
-			</Card>
-		</div> -->
