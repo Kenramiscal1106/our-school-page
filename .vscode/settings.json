@@ -1,6 +1,8 @@
 {
   "conventionalCommits.scopes": [
     "components",
-    "config"
+    "config",
+    "assets",
+    "page"
   ]
 }
