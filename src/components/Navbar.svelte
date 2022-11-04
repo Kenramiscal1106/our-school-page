@@ -1,9 +1,8 @@
 <script>
-  import { onMount } from "svelte";
-  let isScrolled = false;
   import NavItem from "./NavItem.svelte";
   import logo from "../assets/logo.svg";
-  onMount(() => {
+  import hBIcon from "../assets/bar-menu.svg";
+  /* onMount(() => {
     if (window.scrollY > 0) {
       isScrolled = true;
     }
@@ -14,45 +13,26 @@
       }
       isScrolled = false;
     });
-  });
+  }); */
 </script>
 
-<nav
-  class={`transition-[background-color] duration-200 ${
-    isScrolled
-      ? "fixed bg-secondary text-white slide-in-down"
-      : "bg-transparent absolute"
-  }  top-0 left-0 w-full`}
->
-  <div class="flex max-w-7xl m-auto">
-    <div class="p-3 flex items-center  justify-center">
-      <a href="/" class="text-2xl gap-1 flex items-center">
-        <img src={logo} alt="logo" class="h-8" />
-        <span class="text-3xl font-bold">LCCT</span>
-      </a>
-    </div>
-    <div class="flex-1 flex justify-center">
-      <NavItem
-        dropdown={false}
-        text="Academic programs"
-        href="/academic-programs"
-        {isScrolled}
-      />
-      <NavItem
-        dropdown={false}
-        text="Events & activities"
-        href="/events-activities"
-        {isScrolled}
-      />
-      <NavItem dropdown={false} text="Contacts" href="/contacts" {isScrolled} />
-    </div>
-    <div class=" flex justify-center">
-      <NavItem
-        dropdown={false}
-        text="Preregis"
-        href="https://preregis.lcctanauan.edu.ph"
-        {isScrolled}
-      />
+<nav class="fixed items-center top-0 text-black flex w-full">
+  <div class="mr-auto p-3 flex items-center">
+    <a href="/" class="text-2xl gap-1 flex items-center">
+      <img src={logo} alt="logo" class="h-8" />
+      <span class="text-3xl font-bold">LCCT</span>
+    </a>
+  </div>
+  <div class="relative">
+    <button class="md:hidden"><img src={hBIcon} alt="Menu" /></button>
+
+    <div
+      class="flex absolute right-0 flex-col md:flex-row md:static w-52 md:w-auto"
+    >
+      <NavItem href="/academic-programs" text="Academics" />
+      <NavItem href="/events-activities" text="Events & activites" />
+      <NavItem href="/contacts" text="Contacts" />
+      <NavItem href="https://preregis.lcctanauan.edu.ph/" text="Preregis" />
     </div>
   </div>
 </nav>
@@ -65,8 +45,5 @@
     to {
       transform: translateY(0);
     }
-  }
-  .slide-in-down {
-    animation: slide-in-down 0.3s ease-in-out;
   }
 </style>
