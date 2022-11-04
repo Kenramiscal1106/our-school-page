@@ -1,23 +1,26 @@
 ---
-import Card from "../components/Card.astro";
-import Footer from "../components/Footer.astro";
-import Navbar from "../components/Navbar.svelte";
-import Default from "../layouts/Default.astro";
-import "../styles/globals.css"
+import "../styles/globals.css";
+import logo from "../assets/logo.svg";
+import HomeNavbar from "../components/HomeNavbar.svelte";
 ---
 
-<html lang="en" class="">
-
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title>Lcctanauan - The Premiere Catholic Educational Institution in Tanauan, Batangas</title>
-</head>
-
-<body>
-	<Navbar client:load />
-	<Default>
-		<!-- <div class="">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Lcctanauan - The Premiere Catholic Educational Institution in Tanauan,
+      Batangas
+    </title>
+    <link rel="shortcut icon" href={logo} type="image/x-icon" />
+  </head>
+  <body>
+    <HomeNavbar client:load />
+  </body>
+</html>
+<!-- <div class="">
 			<div class="">
 				<h1 class="">
 					The <span class="">Premiere Catholic Educational Institution</span> in Tanauan,
@@ -61,8 +64,3 @@ import "../styles/globals.css"
 				</div>
 			</Card>
 		</div> -->
-	</Default>
-	<Footer />
-</body>
-
-</html>
