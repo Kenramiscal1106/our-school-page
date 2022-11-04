@@ -1,3 +1,22 @@
-<main class="mt-[63.75px] min-h-[calc(100vh-127.5px)]">
-  <slot></slot>
-</main>
+---
+import logoSrc from "../assets/logo.svg";
+import Navbar from "../components/Navbar.svelte";
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href={logoSrc} type="image/x-icon" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navbar client:load />
+    <slot />
+  </body>
+</html>
