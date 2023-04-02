@@ -13,7 +13,7 @@
   <a
     {href}
     target={href.includes("http") ? "_blank" : ""}
-    class={`p-3 text-neutral-700 hover:text-black transition-colors font-medium`}
+    class={`p-3 font-normal hover:font-medium text-white active:font-bold transition-colors`}
     >{text}</a
   >
 {/if}
