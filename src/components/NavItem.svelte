@@ -1,7 +1,7 @@
-<script>
-  export let text;
-  export let dropdown;
-  export let href;
+<script lang="ts">
+  export let text: string;
+  export let href: string;
+  export let dropdown: boolean;
 </script>
 
 {#if dropdown}
