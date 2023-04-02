@@ -3,6 +3,7 @@
     "components",
     "config",
     "assets",
-    "page"
+    "page",
+    "stylesheet"
   ]
 }
