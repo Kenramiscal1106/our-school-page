@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
+/* @font-face {
   font-family: Poppins;
   src: url("/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;  
@@ -27,7 +27,7 @@
   src: url("/Poppins-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
-}
+} */
 @layer base {
   ol {
     @apply list-decimal list-inside marker:font-bold marker:text-blue-accent;
