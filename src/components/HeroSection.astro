@@ -1,0 +1,12 @@
+---
+interface Props {
+  bgSrc: string;
+  bgAlt: string;
+}
+import { Image } from "@astrojs/image/components";
+const { bgSrc, bgAlt } = Astro.props;
+---
+
+<section class="min-h-screen">
+  <Image src={bgSrc} alt={bgAlt} />
+</section>
