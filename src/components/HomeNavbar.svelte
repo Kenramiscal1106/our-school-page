@@ -29,17 +29,25 @@
   <div class="mr-auto">
     <div class="p-3 flex items-center">
       <a href="/" class="text-2xl gap-1 flex items-center text-white">
-        <img src={logo} alt="logo" class="h-8" />
+        <img src={logo.src} alt="logo" class="h-8" />
         <span class="text-3xl font-bold">LCCT</span>
       </a>
     </div>
   </div>
   <div>
     <div class="flex">
-      <NavItem href="/academic-programs" text="Academics" />
-      <NavItem href="/events-activities" text="Events & activites" />
-      <NavItem href="/contacts" text="Contacts" />
-      <NavItem href="https://preregis.lcctanauan.edu.ph/" text="Preregis" />
+      <NavItem dropdown={false} href="/academic-programs" text="Academics" />
+      <NavItem
+        dropdown={false}
+        href="/events-activities"
+        text="Events & activites"
+      />
+      <NavItem dropdown={false} href="/contacts" text="Contacts" />
+      <NavItem
+        dropdown={false}
+        href="https://preregis.lcctanauan.edu.ph/"
+        text="Preregis"
+      />
     </div>
   </div>
 </nav>
