@@ -16,6 +16,5 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"]
     }
-  },
-    "extends": "astro/tsconfigs/strictest"
+  }
 }
