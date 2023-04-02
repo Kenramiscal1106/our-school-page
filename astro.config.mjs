@@ -1,21 +1,18 @@
 import { defineConfig } from "astro/config";
-import tailwindIntegration from "@astrojs/tailwind";
 import svelte from "@astrojs/svelte";
-import image from "@astrojs/image";
+import tailwind from "@astrojs/tailwind";
 
+// https://astro.build/config
 export default defineConfig({
   server: {
     port: 5007,
   },
   integrations: [
-    tailwindIntegration({
+    svelte(),
+    tailwind({
       config: {
         applyBaseStyles: false,
       },
-    }),
-    svelte(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
     }),
   ],
 });
