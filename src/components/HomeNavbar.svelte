@@ -24,7 +24,7 @@
 <nav
   class="z-40 {fixed
     ? 'fixed'
-    : ''} items-center top-0 text-black py-4 px-3 flex w-full"
+    : 'absolute'} items-center top-0 text-black py-4 px-3 flex w-full"
 >
   <div class="mr-auto">
     <div class="p-3 flex items-center">
