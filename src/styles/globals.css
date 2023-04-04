@@ -29,6 +29,11 @@
   font-style: italic;
 } */
 @layer base {
+  html, body {
+    height:100%;
+    margin:0;
+    padding:0px;
+  }
   ol {
     @apply list-decimal list-inside marker:font-bold marker:text-blue-accent;
   }
