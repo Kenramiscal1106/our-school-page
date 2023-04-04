@@ -1,8 +1,10 @@
 ---
 import "../styles/globals.css";
 import logo from "../assets/logo.svg";
-// import { Image } from "@astrojs/image/components";
+import frontPage from "../assets/static-assets/front page.png";
+import secondHero from "../assets/static-assets/second.png";
 import HomeNavbar from "@components/HomeNavbar.svelte";
+import HeroSection from "@components/HeroSection.astro";
 ---
 
 <!DOCTYPE html>
@@ -14,7 +16,7 @@ import HomeNavbar from "@components/HomeNavbar.svelte";
       Lcctanauan - The Premiere Catholic Educational Institution in Tanauan,
       Batangas
     </title>
-    <link rel="shortcut icon" href={logo} type="image/x-icon" />
+    <link rel="shortcut icon" href={logo.src} type="image/x-icon" />
     <link rel="canonical" href="https://lcctanauan.edu.ph" />
     <link rel="shortlink" href="https://lcctanauan.edu.ph" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,8 +27,29 @@ import HomeNavbar from "@components/HomeNavbar.svelte";
     />
   </head>
   <body class="p-0">
-    <div class="bg-gray-600">
-      <HomeNavbar client:load fixed={false} />
-    </div>
+    <HomeNavbar client:load fixed={false} />
+    <HeroSection bgAlt="background" bgSrc={frontPage}>
+      <div
+        class="h-screen absolute top-0 w-full flex justify-center items-center"
+      >
+        <div class="max-w-3xl">
+          <h1 class="leading-normal text-white text-6xl text-center">
+            The Premiere Catholic Institution in Tanauan, Batangas
+          </h1>
+        </div>
+      </div>
+    </HeroSection>
+    <section></section>
+    <HeroSection bgAlt="background" bgSrc={secondHero}>
+      <div
+        class="h-screen absolute top-0 w-full flex justify-center items-center"
+      >
+        <div class="max-w-3xl">
+          <h1 class="leading-normal text-white text-6xl text-center">
+            Painting successful stories since 1948
+          </h1>
+        </div>
+      </div>
+    </HeroSection>
   </body>
 </html>
