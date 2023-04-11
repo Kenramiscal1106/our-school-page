@@ -5,6 +5,8 @@ import frontPage from "../assets/static-assets/front page.png";
 import secondHero from "../assets/static-assets/second.png";
 import HomeNavbar from "@components/HomeNavbar.svelte";
 import HeroSection from "@components/HeroSection.astro";
+import CTASection from "@components/CTASection.astro";
+import Fly from "@components/Fly.svelte";
 ---
 
 <!DOCTYPE html>
@@ -33,23 +35,87 @@ import HeroSection from "@components/HeroSection.astro";
         class="h-screen absolute top-0 w-full flex justify-center items-center"
       >
         <div class="max-w-3xl">
-          <h1 class="leading-normal text-white text-6xl text-center">
-            The Premiere Catholic Institution in Tanauan, Batangas
-          </h1>
+          <Fly client:load>
+            <h1 class="leading-normal text-white text-6xl text-center">
+              The Premiere Catholic Institution in Tanauan, Batangas
+            </h1>
+          </Fly>
         </div>
       </div>
     </HeroSection>
-    <section></section>
+    <section>
+      <div class="max-w-7xl m-auto">
+        <CTASection
+          imageMeta={secondHero}
+          alt="campus"
+          fit={true}
+          reverse={false}
+        >
+          <h2>
+            Our mission: provide innovative education for lifelong learning
+          </h2>
+          <p>
+            In La Consolacion College Tanauan, we aim to create sustainable
+            community involment and extension programs. We also utilize
+            functional research projects for the development of ULCC-SL
+            campuses, industry partners, educational pedagogies, and
+            communities.
+          </p>
+        </CTASection>
+        <CTASection
+          imageMeta={frontPage}
+          alt="campus"
+          fit={true}
+          reverse={true}
+        >
+          <h2>
+            Our vision: to commit ourselves to holistic information of the 21st
+            century learners
+          </h2>
+          <p>
+            As we move to a new normal, we have to adapt to the changes. New
+            challenges may arise, but it won't really affect the quality of our
+            education. We commit ourselves to holistic formation of the 21st
+            century learners because It is a necessity for every students.
+          </p>
+        </CTASection>
+      </div>
+    </section>
     <HeroSection bgAlt="background" bgSrc={secondHero}>
       <div
         class="h-screen absolute top-0 w-full flex justify-center items-center"
       >
         <div class="max-w-3xl">
-          <h1 class="leading-normal text-white text-6xl text-center">
-            Painting successful stories since 1948
-          </h1>
+          <Fly client:load>
+            <h1 class="leading-normal text-white text-6xl text-center">
+              Painting successful stories since 1948
+            </h1>
+          </Fly>
         </div>
       </div>
     </HeroSection>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facilis
+      adipisci, impedit quam amet dolor, officiis eum alias nobis maiores nisi
+      itaque provident doloremque saepe quaerat laborum ab ipsa laboriosam.
+    </p>
+    <p>
+      Non sed odit architecto adipisci quam magni officiis quasi, quis assumenda
+      corporis, ea maiores voluptatibus aliquid nesciunt ratione porro commodi?
+      Distinctio facilis delectus veritatis dolor, veniam ipsa nostrum nulla
+      animi.
+    </p>
+    <p>
+      Ratione, quas non molestiae doloremque soluta, iusto eligendi deserunt
+      reiciendis fugiat rerum similique? Ipsam accusantium perferendis facere
+      molestiae tenetur quam, aut harum, fugiat laboriosam sit deleniti eaque
+      voluptatum minus consequuntur?
+    </p>
+    <p>
+      Saepe quia laboriosam deleniti, distinctio fugiat debitis nostrum
+      consequatur vero, accusantium eveniet maxime totam beatae. Deleniti magni
+      est dolorem. Eligendi reprehenderit quo magnam vero voluptas dolorem
+      dolorum distinctio alias omnis!
+    </p>
   </body>
 </html>
