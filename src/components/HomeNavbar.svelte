@@ -2,25 +2,8 @@
   export let fixed: boolean;
   import NavItem from "./NavItem.svelte";
   import logo from "../assets/logo.svg";
-  /* onMount(() => {
-    if (window.scrollY > 0) {
-      isScrolled = true;
-    }
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        isScrolled = true;
-        return;
-      }
-      isScrolled = false;
-    });
-  }); */
 </script>
 
-<!-- /* `transition-[background-color] duration-200 ${
-    isScrolled
-      ? "fixed bg-secondary text-white slide-in-styledown"
-      : "bg-transparent absolute"
-  }  top-0 left-0 w-full` */ -->
 <nav
   class="z-40 {fixed
     ? 'fixed'
@@ -28,7 +11,7 @@
 >
   <div class="mr-auto">
     <div class="p-3 flex items-center">
-      <a href="/" class="text-2xl gap-1 flex items-center text-white">
+      <a href="/home" class="text-2xl gap-1 flex items-center text-white">
         <img src={logo.src} alt="logo" class="h-8" />
         <span class="text-3xl font-bold">LCCT</span>
       </a>
