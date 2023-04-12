@@ -1,6 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
-import Fly from "./Fly.svelte";
+import ScaleInView from "./ScaleInView.svelte";
 export type Props = {
   imageMeta: ImageMetadata;
   fit: boolean;
@@ -13,13 +13,7 @@ const { imageMeta, fit, alt, reverse } = Astro.props;
 
 <div class="flex gap-x-16 p-10 h-max">
   <div class={`flex-1 ${reverse ? "order-2" : ""}`}>
-    <Fly
-      options={{
-        duration: 800,
-        x: reverse ? 200 : -200,
-      }}
-      client:load
-    >
+    <ScaleInView delay={300} client:load>
       <Image
         src={imageMeta.src}
         width={imageMeta.width}
@@ -27,20 +21,14 @@ const { imageMeta, fit, alt, reverse } = Astro.props;
         alt={alt}
         class="rounded-lg"
       />
-    </Fly>
+    </ScaleInView>
   </div>
   <div class="flex-1 flex flex-col justify-center">
-    <Fly
-      options={{
-        duration: 800,
-        x: reverse ? -200 : 200,
-      }}
-      client:load
-    >
+    <ScaleInView client:load>
       <div>
         <slot />
         <button>Learn more</button>
       </div>
-    </Fly>
+    </ScaleInView>
   </div>
 </div>
