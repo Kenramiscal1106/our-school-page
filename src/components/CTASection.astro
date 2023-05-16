@@ -13,7 +13,13 @@ const { imageMeta, fit, alt, reverse } = Astro.props;
 
 <div class="flex gap-x-16 p-10 h-max">
   <div class={`flex-1 ${reverse ? "order-2" : ""}`}>
-    <ScaleInView delay={300} client:load>
+    <ScaleInView
+      delay={300}
+      client:load
+      options={{
+        start: 0.5,
+      }}
+    >
       <Image
         src={imageMeta.src}
         width={imageMeta.width}
